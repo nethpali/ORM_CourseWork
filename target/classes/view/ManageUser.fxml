@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="606.0" prefWidth="951.0" style="-fx-background-color: #607d8b; -fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManageUserController">
+   <children>
+      <Label layoutX="407.0" layoutY="21.0" text="Manage User">
+         <font>
+            <Font name="System Bold" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="40.0" layoutX="353.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-user-24.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="33.0" layoutY="86.0" prefHeight="200.0" prefWidth="897.0" style="-fx-background-color: #778ca3; -fx-background-radius: 20px;">
+         <children>
+            <Label layoutX="11.0" layoutY="57.0" text="User Id:">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="367.0" layoutY="56.0" text="UserName:">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="131.0" text="Password:">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblUserId" layoutX="115.0" layoutY="57.0" prefHeight="31.0" prefWidth="200.0" />
+            <TextField fx:id="txtUserName" layoutX="562.0" layoutY="53.0" prefHeight="40.0" prefWidth="200.0" promptText="UserName" style="-fx-background-radius: 20px;" />
+            <PasswordField fx:id="txtPassword" layoutX="119.0" layoutY="125.0" prefHeight="40.0" prefWidth="200.0" promptText="Password" style="-fx-background-radius: 20px;" />
+            <ImageView fitHeight="31.0" fitWidth="24.0" layoutX="327.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-hide-30%20(1).png" />
+               </image>
+            </ImageView>
+            <Label layoutX="363.0" layoutY="129.0" text="ReEnter-Password:">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtReEnter_Password" layoutX="559.0" layoutY="123.0" prefHeight="40.0" prefWidth="200.0" promptText="ReEnter-Password" style="-fx-background-radius: 20px;" />
+            <ImageView fitHeight="31.0" fitWidth="24.0" layoutX="765.0" layoutY="134.0" onMouseClicked="#imgHideOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-hide-30%20(1).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnSave" layoutX="798.0" layoutY="56.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="76.0" style="-fx-background-radius: 20px;" text="Save" />
+            <Button fx:id="btnUpdate" layoutX="798.0" layoutY="108.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="76.0" style="-fx-background-radius: 20px;" text="Update" />
+            <Button fx:id="btnDelete" layoutX="798.0" layoutY="158.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="76.0" style="-fx-background-radius: 20px;" text="Delete" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="27.0" layoutY="307.0" prefHeight="261.0" prefWidth="897.0" style="-fx-background-radius: 20px; -fx-background-color: #d1d8e0;">
+         <children>
+            <TableView fx:id="tblManageUser" layoutX="35.0" layoutY="11.0" onMouseClicked="#rowMouseOnClicked" prefHeight="228.0" prefWidth="840.0">
+              <columns>
+                <TableColumn fx:id="colUserId" prefWidth="157.0" text="UserId" />
+                <TableColumn fx:id="colUserName" prefWidth="235.0" text="UserName" />
+                  <TableColumn fx:id="colPassword" prefWidth="194.0" text="Password" />
+                  <TableColumn fx:id="colReEnter_Password" prefWidth="253.0" text="ReEnter-Password" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

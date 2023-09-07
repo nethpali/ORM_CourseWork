@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ManageRoom" prefHeight="606.0" prefWidth="951.0" style="-fx-background-radius: 20px; -fx-background-color: #607d8b;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManageRoomController">
+   <children>
+      <Label layoutX="392.0" layoutY="35.0" text="Mange Rooms">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="49.0" fitWidth="48.0" layoutX="337.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-heating-room-24.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="30.0" layoutY="87.0" prefHeight="191.0" prefWidth="489.0" style="-fx-background-radius: 20px; -fx-background-color: #778ca3;" styleClass="linear-cb" stylesheets="@../CSS/style.css">
+         <children>
+            <Label layoutX="13.0" layoutY="54.0" text="Room Id:">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="115.0" text="Room Type:">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="163.0" layoutY="113.0" prefHeight="31.0" prefWidth="187.0" />
+            <Button layoutX="378.0" layoutY="18.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" style="-fx-background-radius: 20px;" text="Save" />
+            <Label layoutX="163.0" layoutY="54.0" prefHeight="39.0" prefWidth="183.0" />
+            <Button layoutX="378.0" layoutY="67.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" style="-fx-background-radius: 20px;" text="Update" />
+            <Button layoutX="378.0" layoutY="116.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" style="-fx-background-radius: 20px;" text="Delete" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="542.0" layoutY="85.0" prefHeight="472.0" prefWidth="381.0" style="-fx-background-color: #d1d8e0; -fx-background-radius: 20px;">
+         <children>
+            <Label layoutX="82.0" layoutY="21.0" text="Room Type details">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="88.0" text="Room Type Id:">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="159.0" text="Description:">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="226.0" text="KeyMoney:">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <TextField layoutX="172.0" layoutY="84.0" prefHeight="39.0" prefWidth="187.0" promptText="Rxxx" style="-fx-background-radius: 20px;" />
+            <TextField layoutX="172.0" layoutY="221.0" prefHeight="39.0" prefWidth="187.0" promptText="LKR" style="-fx-background-radius: 20px;" />
+            <Button layoutX="251.0" layoutY="321.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" style="-fx-background-radius: 20px; -fx-background-color: #778ca3;" text="Delete" />
+            <Button layoutX="150.0" layoutY="321.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="82.0" style="-fx-background-radius: 20px; -fx-background-color: #778ca3;" text="Update" />
+            <Button layoutX="45.0" layoutY="323.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="88.0" style="-fx-background-radius: 20px; -fx-background-color: #778ca3;" text="Save" />
+            <ComboBox fx:id="cmbDescription" layoutX="176.0" layoutY="158.0" prefHeight="31.0" prefWidth="183.0" promptText="Description" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="287.0" prefHeight="278.0" prefWidth="489.0" style="-fx-background-radius: 20px; -fx-background-color: #778ca3;">
+         <children>
+            <TableView layoutX="14.0" layoutY="14.0" prefHeight="251.0" prefWidth="459.0">
+              <columns>
+                <TableColumn prefWidth="172.0" text="Room Id" />
+                <TableColumn prefWidth="149.0" text="Room Type" />
+                  <TableColumn prefWidth="137.0" text="KeyMoney" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ManageStudent" prefHeight="606.0" prefWidth="951.0" style="-fx-background-color: #607d8b; -fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManageStudentController">
+   <children>
+      <Label layoutX="379.0" layoutY="30.0" text="Manage Student">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="330.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-bust-in-silhouette-48.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="24.0" layoutY="89.0" prefHeight="194.0" prefWidth="880.0" style="-fx-background-color: #778ca3; -fx-background-radius: 20px;">
+         <children>
+            <Label layoutX="23.0" layoutY="16.0" text="Student Id:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtStudentId" layoutX="17.0" layoutY="46.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-radius: 20px;" />
+            <Label layoutX="28.0" layoutY="103.0" text="Name:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="12.0" text="Address:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="244.0" layoutY="105.0" text="Contact-No:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="474.0" layoutY="15.0" text="Dob:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="465.0" layoutY="109.0" text="Gender">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField layoutX="237.0" layoutY="132.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-radius: 20px;" />
+            <TextField fx:id="txtStudentAddress" layoutX="244.0" layoutY="42.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-radius: 20px;" />
+            <TextField fx:id="txtStudentName" layoutX="19.0" layoutY="132.0" prefHeight="40.0" prefWidth="187.0" style="-fx-background-radius: 20px;" />
+            <RadioButton fx:id="radiobtnMale" layoutX="465.0" layoutY="137.0" mnemonicParsing="false" text="Male" />
+            <RadioButton fx:id="radioobtnFemale" layoutX="560.0" layoutY="139.0" mnemonicParsing="false" text="Female" />
+            <Button fx:id="btnAdd" layoutX="734.0" layoutY="46.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #d1d8e0;" text="Add" />
+            <Button fx:id="btnUpdate" layoutX="734.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #d1d8e0;" text="Update" />
+            <Button fx:id="btnDelete" layoutX="734.0" layoutY="140.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #d1d8e0;" text="Delete" />
+            <DatePicker fx:id="txtContactNo" layoutX="470.0" layoutY="47.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="27.0" layoutY="297.0" prefHeight="289.0" prefWidth="880.0" style="-fx-background-radius: 20px; -fx-background-color: #d1d8e0;">
+         <children>
+            <TableView fx:id="tblStudent" layoutX="38.0" layoutY="58.0" prefHeight="200.0" prefWidth="742.0">
+              <columns>
+                <TableColumn fx:id="colStudentId" prefWidth="127.0" text="Student-Id" />
+                <TableColumn fx:id="colName" prefWidth="111.0" text="Name" />
+                  <TableColumn fx:id="colAddress" prefWidth="122.0" text="Address" />
+                  <TableColumn fx:id="colContactNo" prefWidth="124.0" text="Contact-No" />
+                  <TableColumn fx:id="colDob" prefWidth="128.0" text="DOB" />
+                  <TableColumn fx:id="colGender" prefWidth="129.0" text="Gender" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtSearch" layoutX="593.0" layoutY="14.0" promptText="Search Here..." />
+            <ImageView fitHeight="31.0" fitWidth="52.0" layoutX="561.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-search-24.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
